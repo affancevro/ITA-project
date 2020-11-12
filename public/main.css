@@ -1,0 +1,316 @@
+body{
+    background:rgb(231, 245, 252);
+    padding: 0;
+    margin: 0px;
+    font-family: "Montserrat";
+}
+
+body * {
+    transition: all 0.5s ease-in-out;
+}
+header{
+    height: 600px;
+    position: relative;
+    z-index: -1;
+background: url(https://images.unsplash.com/photo-1427751840561-9852520f8ce8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80)
+;margin-top: -40px;
+background-size: cover;
+}
+header h1{
+    padding-top: 100px;
+    font-size: 56px;
+    margin-left: 200px;
+}
+.toggler{
+    top: 0px;
+    padding: 12px;
+    background: rgb(31, 31, 31);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav ul{
+    list-style: none;
+}
+.sideNav{
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    left: 0px;
+    background: #222;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px ;
+
+}
+.sideNav h2{
+    color: #eee;
+}
+.sideNav a{
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #eee;
+    display: block;
+    transition: 0.3s;
+
+}
+.sideNav a:hover{
+    color: aquamarine;
+}
+.sideNav .closebtn{
+    
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    font-size: 36px;
+}
+#openNav{
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 4px;
+    color: #eee;
+    font-weight: bold;
+    background: rgb(44, 44, 44);
+    cursor: pointer;
+}
+
+#posts{
+    width: 100%;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.post{
+    --borderWidth: 3px;
+    background:  #eee;
+    position: relative;
+    border-radius: var(--borderWidth);
+    width: 100%;
+    max-width: 250px;
+    margin: 10px;
+}
+
+
+main.postContainer{
+    width: 70%;
+    margin: 0 auto;
+}
+.post img{
+    width: 250px;
+}
+
+.post > a{
+    text-decoration: none;
+    color:  rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+    
+    align-content: center;
+    
+}
+.post > a:hover{
+    color: yellow;
+}
+.post > div{
+    display: block;
+    height: 250px;
+    background-size: 100% !important;
+    background: no-repeat;
+}
+.post > div:hover{
+    background-size: 100;
+}
+
+#loading {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+#edit,#delete{
+    background: none;
+    padding: 10px;
+    margin-top: 40px;
+    display: none;
+}
+#back{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: block;
+    width: 100px;
+    background: #222;
+    color: #eee;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+}
+ #edit{
+     border: 1px solid #ddd;
+ }
+#delete{
+    border:1px solid #ddd;
+   
+    margin-top: 50px;
+}
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background:  #005b96;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+  }
+  
+  @import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+
+
+#post {
+ 
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  color: white;
+  font-family: 'Raleway';
+  font-size: 2.5rem;
+}
+
+.post:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#editForm{
+    display: flex;
+    
+}
+
+#editSubmit{
+
+    padding-right: 0px;
+}
+
+form{
+    width: 70%;
+    margin: 0 auto;
+}
+
+form * {
+    width: 100%;
+    display: block;
+    margin: 20px 0px;
+    padding: 10px;
+
+}
+
+form input[type ="submit"]{
+    width: 120px;
+    border: none;
+    cursor: pointer;
+}
+form input[type ="submit"]:hover{
+    color: black;
+    font-weight: bold;
+}
+#content{
+    height: 200px;
+}
+
+#progressHandler{
+  display: none;
+
+}
+
+#progressBar{
+    height: 30px;
+    
+}
+
+#color{
+    color: #222;
+    font-size: 30px;
+
+}
+.h3{
+    font-size: 40px;
+}
+
+#size{
+    height: 250px;
+}
+.input-group{
+    display: flex;
+    justify-content: center;
+}
+#pagination{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 90px;
+}
+#button{
+    border: 1px solid #ddd;
+}
+#button:hover{
+    border: 1px solid #1098ad;
+}
+
+#search{
+    color: black;
+}
